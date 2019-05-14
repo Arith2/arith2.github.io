@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yongxu Jin&#39;s Homepage on Yongxu Jin&#39;s Homepage</title>
+    <link>https://jinyx728.github.io/</link>
+    <description>Recent content in Yongxu Jin&#39;s Homepage on Yongxu Jin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Yongxu Jin</copyright>
+    <lastBuildDate>Tue, 17 Jul 2018 22:02:00 +0800</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Animal Gait Generation</title>
+      <link>https://jinyx728.github.io/project/animal-gait/</link>
+      <pubDate>Mon, 08 Oct 2018 19:10:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/animal-gait/</guid>
+      <description>&lt;p&gt;I did this research project at &lt;a href=&#34;http://www.cad.zju.edu.cn/english.html&#34; target=&#34;_blank&#34;&gt;State Key Lab of CAD/CG&lt;/a&gt;, &lt;a href=&#34;http://www.zju.edu.cn/english/&#34; target=&#34;_blank&#34;&gt;Zhejiang University&lt;/a&gt;, advised by &lt;a href=&#34;http://www.cad.zju.edu.cn/home/weiweixu/weiweixu_en.htm&#34; target=&#34;_blank&#34;&gt;Weiwei Xu&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I developed a system that could automatically generate gait and form given an animal skeleton. I referred the method proposed in &lt;a href=&#34;http://grail.cs.washington.edu/projects/animal-morphology/s2009/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Optimal Gait and Form for Animal Locomotion&lt;/em&gt;&lt;/a&gt;. Given the mass of different parts of the animal, I used a objective function as a inner loop and a sample based optimization method as a outer loop. The inner loop penalized joint torque, joint velocity and head motion. I used SQP optimization method to solve this constrained non-linear optimization problem. The outer loop optimized foot contact time. I used basin-CMA to solve this sample based optimization problem.&lt;/p&gt;
+
+&lt;p&gt;All the codes are written in C++. I used rigidbody simulation library, SQP library to implement this system. This system is still under developing. I plan to first use automatic differentiation techniques to compute derivatives, then compute derivatives manually.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: C++, Rigidbody Simulation, SQP, Automatic Differentiation&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Codimensional Fluid Simulation</title>
+      <link>https://jinyx728.github.io/project/codim-fluid/</link>
+      <pubDate>Mon, 08 Oct 2018 19:10:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/codim-fluid/</guid>
+      <description>&lt;p&gt;I am currently working on this research project advised by &lt;a href=&#34;http://www.dartmouth.edu/~boolzhu/index.html&#34; target=&#34;_blank&#34;&gt;Bo Zhu&lt;/a&gt;. This project is towards SIGGRAPH 2019.&lt;/p&gt;
+
+&lt;p&gt;We use closest point method (CPM, i.e. extending points on the surface to 3D space) to solve partial differential equation (PDE, like Navier-Stokes equations) on surface. We compute level set function from surface, solve Poisson equation on 3D grid, interpolate pressure and velocity value from closest points on the grid to surface, and calculate advection using particles on the surface. We also adopt non-manifold grid to handle situations where two surfaces are close to each other.&lt;/p&gt;
+
+&lt;p&gt;Still in progress &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills Involved: C++, OpenGL, GLFW, GLSL, Eigen, PDE, Numerical Methods&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ToonNet: A cartoon image dataset and a DNN-based semantic classification system</title>
+      <link>https://jinyx728.github.io/publication/toonnet/</link>
+      <pubDate>Thu, 09 Aug 2018 11:03:07 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/publication/toonnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cartoon Image Modelling</title>
+      <link>https://jinyx728.github.io/project/cartoon-image-modelling/</link>
+      <pubDate>Wed, 18 Jul 2018 21:00:15 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/cartoon-image-modelling/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m doing this research project at &lt;a href=&#34;http://dalab.se.sjtu.edu.cn/www/home/&#34; target=&#34;_blank&#34;&gt;Digital ART Lab&lt;/a&gt;, advised by &lt;a href=&#34;http://dalab.se.sjtu.edu.cn/www/home/?page_id=17&#34; target=&#34;_blank&#34;&gt;Xubo Yang&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cartoon image modelling is an interesting topic both in academia and industry. Once this technique becomes mature, children can easily model their hand-drawn cartoon character and see their character move and dance vividly via an AR application. However, current modelling method simply dilates the image to a 3D model and adds an NPR shader, which only works on limited cartoon images and requires manual configuration of joints of the character.&lt;/p&gt;
+
+&lt;p&gt;We decide to add semantic information to the modelling process. First, we do semantic classification and segmentation to the cartoon image, using a customized deep neural network trained on a dataset we built. Then, we model the image using classification and segmentation information, and generate skeleton (with limbs and joints) automatically. Finally, we attach pre-defined animation and sound to make the character move and dance.&lt;/p&gt;
+
+&lt;p&gt;This research project is still in progress. We have built a cartoon image dataset and a DNN-based semantic classification system. See &lt;a href=&#34;https://jinyx728.github.io/publication/toonnet/&#34;&gt;&lt;em&gt;ToonNet: A cartoon image dataset and a DNN-based semantic classification system&lt;/em&gt;&lt;/a&gt; for detail. we are currently experimenting modelling the cartoon image interactively using classfication and segmentation information.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: Python/Matlab/C#, Unity, Tensorflow&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Mining Research</title>
+      <link>https://jinyx728.github.io/project/data-mining-research/</link>
+      <pubDate>Wed, 18 Jul 2018 19:45:05 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/data-mining-research/</guid>
+      <description>
+
+&lt;p&gt;I have several research experiences on data mining, which will be described below in detail.&lt;/p&gt;
+
+&lt;h2 id=&#34;morphological-classification-of-amazon-rainforest-via-satellite-data&#34;&gt;&lt;strong&gt;Morphological Classification of Amazon Rainforest via Satellite Data&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I did this online research project of &lt;a href=&#34;https://www.ischool.berkeley.edu&#34; target=&#34;_blank&#34;&gt;School of Information&lt;/a&gt;, &lt;a href=&#34;https://www.berkeley.edu&#34; target=&#34;_blank&#34;&gt;UC Berkeley&lt;/a&gt;, advised by &lt;a href=&#34;https://www.ischool.berkeley.edu/people/mike-tamir&#34; target=&#34;_blank&#34;&gt;Mike Tamir&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Around 30% of surface of Earth is covered by forests but many of them are suffering from deforestation which raises the concerns about forest, especially rainforest. As deforestations are mostly concentrated in rainforest, understanding the condition of rainforest is a global issue and a common way to monitor rainforest is remote sensing. In this project, images of Amazon rainforest captured by Planet company are used and our group chose the 3 band images to process. After building simple baseline model to analyse the result, directions for data preprocess and augmentation became clear. Then VGG-16 was chosen to perform and produce the final test score based on F2 evaluation.&lt;/p&gt;
+
+&lt;p&gt;In terms of technical details, we first conducted data pre-processing, including haze removal and data augmentation. Then we implemented data set extension, image contrast optimization and dimensionality reduction. After that, we compared the multi-label classification outcomes processed by MLP, shallow CNN and VGG-16 Network, and chose VGG-16 Network as the main classification method. Finally, we improved the VGG-16 Network details and achieved the F2 score of 0.90254 (world highest 0.93317 on Kaggle).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: Python, Numpy, Pandas, Keras, OpenCV&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;text-data-mining-and-analysis-of-enron-corporation-emails&#34;&gt;&lt;strong&gt;Text Data Mining and Analysis of Enron Corporation Emails&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I did this research project at &lt;a href=&#34;http://english.ict.cas.cn&#34; target=&#34;_blank&#34;&gt;Institute of Computing Technology&lt;/a&gt;, &lt;a href=&#34;http://english.cas.cn&#34; target=&#34;_blank&#34;&gt;Chinese Academy of Sciences&lt;/a&gt;, advised by Ning Li.&lt;/p&gt;
+
+&lt;p&gt;The Enron Corporation is an American energy company, whose bankruptcy was caused by the Enron Scandal. Some of its mails, which are good materials for Text Mining, were made public by Federal Energy Regulatory Commission (FERC). In this project, we chose Python as the programming language, NLTK as the word segmentation tool, TF-IDF as the form of document vector, LDA and KMeans as clustering methods, and Gephi as the visualization tool. Through the above methods, we analyze the mail content of the main months of Enron Scandal, and we get some high frequency topics of every month. Successfully, we find that some topics and Enron Scandal itself are linked. Finally, by the form of pictures, we show the staff mail messaging relationship of high-frequency topics above.&lt;/p&gt;
+
+&lt;p&gt;In terms of technical details, we first conducted word splitting, lexical reduction of email title/body parts and converted all participles to the TF-IDF vectors. we then realized vectors clustering via LDA and K-means. Finally we plotted the relationship networks of senders and recipients via Gephi based on the email contents and clustering results.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: Python/JAVA, Numpy, Pandas, NLTK, Sklearn, Gephi&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Human Shape and Pose Modelling</title>
+      <link>https://jinyx728.github.io/project/human-shape-and-pose-modelling/</link>
+      <pubDate>Wed, 18 Jul 2018 19:43:12 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/human-shape-and-pose-modelling/</guid>
+      <description>&lt;p&gt;This research project is the PRP research project of &lt;a href=&#34;http://en.sjtu.edu.cn&#34; target=&#34;_blank&#34;&gt;Shanghai Jiao Tong University&lt;/a&gt;. I did this project at &lt;a href=&#34;http://www.visionlab.sjtu.edu.cn&#34; target=&#34;_blank&#34;&gt;VisionLab&lt;/a&gt;, advised by &lt;a href=&#34;http://www.automation.sjtu.edu.cn/en/ShowPeople.aspx?info_id=505&amp;amp;info_lb=326&amp;amp;flag=224&#34; target=&#34;_blank&#34;&gt;Xu Zhao&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We developed a system that automatically generate a 3D human model with pose and shape from a single RGB image. We then used this technique to develop an application: automatically measure the BWH of a person from a photo. Detailed procedure is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Capture the photo of a person with a plotting scale.&lt;/li&gt;
+&lt;li&gt;Use the method describe in &lt;a href=&#34;http://openaccess.thecvf.com/content_cvpr_2017/html/Cao_Realtime_Multi-Person_2D_CVPR_2017_paper.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields&lt;/em&gt;&lt;/a&gt; to extract the 2D human pose in real-time.&lt;/li&gt;
+&lt;li&gt;Use the method describe in &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-319-46454-1_34&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image&lt;/em&gt;&lt;/a&gt; to fit a 3D human model with pose and shape to the 2D pose.&lt;/li&gt;
+&lt;li&gt;measure the BWH of the human model, and calculate the BWH of the person using the plotting scale.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am the &lt;strong&gt;team leader&lt;/strong&gt; of this project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: Python, Caffe, OpenPose, SMPLify&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lumir</title>
+      <link>https://jinyx728.github.io/project/lumir/</link>
+      <pubDate>Wed, 18 Jul 2018 19:40:33 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/lumir/</guid>
+      <description>&lt;p&gt;Lumir is the course project of &lt;em&gt;SE342-Computer Vision&lt;/em&gt;. It is written in C++, using Qt framework.&lt;/p&gt;
+
+&lt;p&gt;Lumir provides various image processing algorithms. &lt;strong&gt;All of the algorithms are written by myself&lt;/strong&gt;, without using libraries like OpenCV. Supported algorithms are listed below:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RGB channel seperation&lt;/li&gt;
+&lt;li&gt;RGB to GRAY&lt;/li&gt;
+&lt;li&gt;Hue/Saturation/Value adjustment&lt;/li&gt;
+&lt;li&gt;Binarization (Otsu algorithm or double threshold)&lt;/li&gt;
+&lt;li&gt;Rotation/Scaling (nearest neighbor interpolation or bilinear interpolation)&lt;/li&gt;
+&lt;li&gt;Image add/minus/multiply operation&lt;/li&gt;
+&lt;li&gt;Clipping&lt;/li&gt;
+&lt;li&gt;Contrast adjustment (piecewise linear, exponent, logarithm or histogram equalization)&lt;/li&gt;
+&lt;li&gt;Smoothing filter (mean filter, gaussian filter or median filter)&lt;/li&gt;
+&lt;li&gt;Edge detection (Sobel operator, Laplace operator or Canny operator)&lt;/li&gt;
+&lt;li&gt;Hough transform (detect line or circle)&lt;/li&gt;
+&lt;li&gt;Binary morphology (dilation, erosion, open, close, thinning, thickening)&lt;/li&gt;
+&lt;li&gt;Distance transform&lt;/li&gt;
+&lt;li&gt;Skeleton extraction and reconstruction&lt;/li&gt;
+&lt;li&gt;Grayscale morphology (dilation, erosion, open, close)&lt;/li&gt;
+&lt;li&gt;Watershed algorithm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jinyx728/SE342-Computer-Vision&#34; target=&#34;_blank&#34;&gt;Github link&lt;/a&gt; for source code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: C++, Qt, OpenCV(no algorithms used)&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Neuron Simulation Engine</title>
+      <link>https://jinyx728.github.io/project/neuron-simulation-engine/</link>
+      <pubDate>Wed, 18 Jul 2018 19:20:06 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/neuron-simulation-engine/</guid>
+      <description>&lt;p&gt;Neuron simulation engine is the course project of &lt;em&gt;SE341-Game Designing and Programming&lt;/em&gt;. We developed this engine using Unity and C# language.&lt;/p&gt;
+
+&lt;p&gt;This simulation engine allows user to create and delete neurons and build a neural network via HTC Vive headset. It can also simulate the process of nerve impulse and inhibition. Detailed features are listed below:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Provides basic structures including sensors, effectors, excitatory neurons and inhibitory neurons. Users can customize the number of incoming and outgoing channels of neurons, such as the number of peripheral branches and the number of side branches.&lt;/li&gt;
+&lt;li&gt;Allows users to build a neural network by freely choosing and moving different basic structures.&lt;/li&gt;
+&lt;li&gt;Allows the user to set neuron parameters such as nerve impulse conduction time (from neuronal cell body to axon tip), neurotransmitter transmission time (from axon tip to next neuron cell body), nerve excitation/inhibition duration.&lt;/li&gt;
+&lt;li&gt;Correctly simulates the effects of any neural networks in real-time, such as which effectors or neurons are excited and which are not. The conduction process of nerve impulses is visualized during the simulation.&lt;/li&gt;
+&lt;li&gt;Allows real-time magnification observation of a neuron&amp;rsquo;s axons, using particles to simulate the microscopic process of axons&amp;rsquo; nerve impulse conduction (substance exchange of sodium and potassium ions after nerve impulses pass).&lt;/li&gt;
+&lt;li&gt;Allows real-time magnification observation of the peripheral branches/lateral branches of a neuron, using particles to simulate the microscopic processes of neurotransmitter transmission (neurotransmitters are produced from the peripheral branches/lateral branches, diffuse and bind to the next neuron)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Skills involved: C#, Unity&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

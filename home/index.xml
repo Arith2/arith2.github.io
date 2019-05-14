@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Yongxu Jin&#39;s Homepage</title>
+    <link>https://jinyx728.github.io/home/</link>
+    <description>Recent content in Homes on Yongxu Jin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Yongxu Jin</copyright>
+    <lastBuildDate>Tue, 17 Jul 2018 22:02:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jinyx728.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://jinyx728.github.io/home/about/</link>
+      <pubDate>Tue, 17 Jul 2018 22:02:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/about/</guid>
+      <description>Biography I am an undergraduate at School of Software, Shanghai Jiao Tong University. I am currently a research assistant at Digital ART Lab, advised by Xubo Yang and Bo Zhu. I was a research assistant at State Key Lab of CAD&amp;amp;CG, Zhejiang University, advised by Weiwei Xu.
+My research interest includes Computer Graphics, Computer Vision and Machine Learning.
+Here is my CV.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://jinyx728.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>https://jinyx728.github.io/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://jinyx728.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://jinyx728.github.io/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://jinyx728.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Custom Section</title>
+      <link>https://jinyx728.github.io/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/teaching/</guid>
+      <description>This is an example of using the custom widget to create your own homepage section.
+To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://jinyx728.github.io/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://jinyx728.github.io/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

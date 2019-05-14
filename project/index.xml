@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Yongxu Jin&#39;s Homepage</title>
+    <link>https://jinyx728.github.io/project/</link>
+    <description>Recent content in Projects on Yongxu Jin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Yongxu Jin</copyright>
+    <lastBuildDate>Mon, 08 Oct 2018 19:10:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jinyx728.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Animal Gait Generation</title>
+      <link>https://jinyx728.github.io/project/animal-gait/</link>
+      <pubDate>Mon, 08 Oct 2018 19:10:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/animal-gait/</guid>
+      <description>I did this research project at State Key Lab of CAD/CG, Zhejiang University, advised by Weiwei Xu.
+I developed a system that could automatically generate gait and form given an animal skeleton. I referred the method proposed in Optimal Gait and Form for Animal Locomotion. Given the mass of different parts of the animal, I used a objective function as a inner loop and a sample based optimization method as a outer loop.</description>
+    </item>
+    
+    <item>
+      <title>Codimensional Fluid Simulation</title>
+      <link>https://jinyx728.github.io/project/codim-fluid/</link>
+      <pubDate>Mon, 08 Oct 2018 19:10:00 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/codim-fluid/</guid>
+      <description>I am currently working on this research project advised by Bo Zhu. This project is towards SIGGRAPH 2019.
+We use closest point method (CPM, i.e. extending points on the surface to 3D space) to solve partial differential equation (PDE, like Navier-Stokes equations) on surface. We compute level set function from surface, solve Poisson equation on 3D grid, interpolate pressure and velocity value from closest points on the grid to surface, and calculate advection using particles on the surface.</description>
+    </item>
+    
+    <item>
+      <title>Cartoon Image Modelling</title>
+      <link>https://jinyx728.github.io/project/cartoon-image-modelling/</link>
+      <pubDate>Wed, 18 Jul 2018 21:00:15 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/cartoon-image-modelling/</guid>
+      <description>I&amp;rsquo;m doing this research project at Digital ART Lab, advised by Xubo Yang.
+Cartoon image modelling is an interesting topic both in academia and industry. Once this technique becomes mature, children can easily model their hand-drawn cartoon character and see their character move and dance vividly via an AR application. However, current modelling method simply dilates the image to a 3D model and adds an NPR shader, which only works on limited cartoon images and requires manual configuration of joints of the character.</description>
+    </item>
+    
+    <item>
+      <title>Data Mining Research</title>
+      <link>https://jinyx728.github.io/project/data-mining-research/</link>
+      <pubDate>Wed, 18 Jul 2018 19:45:05 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/data-mining-research/</guid>
+      <description>I have several research experiences on data mining, which will be described below in detail.
+Morphological Classification of Amazon Rainforest via Satellite Data I did this online research project of School of Information, UC Berkeley, advised by Mike Tamir.
+Around 30% of surface of Earth is covered by forests but many of them are suffering from deforestation which raises the concerns about forest, especially rainforest. As deforestations are mostly concentrated in rainforest, understanding the condition of rainforest is a global issue and a common way to monitor rainforest is remote sensing.</description>
+    </item>
+    
+    <item>
+      <title>Human Shape and Pose Modelling</title>
+      <link>https://jinyx728.github.io/project/human-shape-and-pose-modelling/</link>
+      <pubDate>Wed, 18 Jul 2018 19:43:12 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/human-shape-and-pose-modelling/</guid>
+      <description>This research project is the PRP research project of Shanghai Jiao Tong University. I did this project at VisionLab, advised by Xu Zhao.
+We developed a system that automatically generate a 3D human model with pose and shape from a single RGB image. We then used this technique to develop an application: automatically measure the BWH of a person from a photo. Detailed procedure is:
+ Capture the photo of a person with a plotting scale.</description>
+    </item>
+    
+    <item>
+      <title>Lumir</title>
+      <link>https://jinyx728.github.io/project/lumir/</link>
+      <pubDate>Wed, 18 Jul 2018 19:40:33 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/lumir/</guid>
+      <description>Lumir is the course project of SE342-Computer Vision. It is written in C++, using Qt framework.
+Lumir provides various image processing algorithms. All of the algorithms are written by myself, without using libraries like OpenCV. Supported algorithms are listed below:
+ RGB channel seperation RGB to GRAY Hue/Saturation/Value adjustment Binarization (Otsu algorithm or double threshold) Rotation/Scaling (nearest neighbor interpolation or bilinear interpolation) Image add/minus/multiply operation Clipping Contrast adjustment (piecewise linear, exponent, logarithm or histogram equalization) Smoothing filter (mean filter, gaussian filter or median filter) Edge detection (Sobel operator, Laplace operator or Canny operator) Hough transform (detect line or circle) Binary morphology (dilation, erosion, open, close, thinning, thickening) Distance transform Skeleton extraction and reconstruction Grayscale morphology (dilation, erosion, open, close) Watershed algorithm  Github link for source code.</description>
+    </item>
+    
+    <item>
+      <title>Neuron Simulation Engine</title>
+      <link>https://jinyx728.github.io/project/neuron-simulation-engine/</link>
+      <pubDate>Wed, 18 Jul 2018 19:20:06 +0800</pubDate>
+      
+      <guid>https://jinyx728.github.io/project/neuron-simulation-engine/</guid>
+      <description>Neuron simulation engine is the course project of SE341-Game Designing and Programming. We developed this engine using Unity and C# language.
+This simulation engine allows user to create and delete neurons and build a neural network via HTC Vive headset. It can also simulate the process of nerve impulse and inhibition. Detailed features are listed below:
+ Provides basic structures including sensors, effectors, excitatory neurons and inhibitory neurons. Users can customize the number of incoming and outgoing channels of neurons, such as the number of peripheral branches and the number of side branches.</description>
+    </item>
+    
+  </channel>
+</rss>
