@@ -18,12 +18,12 @@
       <pubDate>Tue, 16 Jul 2019 22:02:00 +0800</pubDate>
       
       <guid>https://arith2.github.io/home/about/</guid>
-      <description>Biography I am a prospective master student of the Department of Electrical Engineering and Information Technology, ETH Zurich.  
-My research interest includes Quantum Chip and Quantum Algorithm.
-Here is my CV.</description>
+      <description>Biography I am a prospective master student of the department of Electrical Engineering and Information Technology, ETH Zurich.  
+      My research interest includes Quantum Chip and Quantum Algorithm. I hope to take part in the design of Quantum Computer in this post-Moore era.
+      Here is my CV.</description>
     </item>
     
-    <item>
+  <!--  <item>
       <title>Projects</title>
       <link>https://arith2.github.io/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
@@ -86,7 +86,7 @@ To remove this section, either delete content/home/teaching.md or edit the front
       <guid>https://arith2.github.io/home/tags/</guid>
       <description></description>
     </item>
-    
+    -->
     <item>
       <title>Contact</title>
       <link>https://arith2.github.io/home/contact/</link>
