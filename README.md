@@ -1,3 +1,2 @@
 # arith2.github.io
-
-My personal website.
+The personal website of Yu Zhu, a master student in ETHz.
