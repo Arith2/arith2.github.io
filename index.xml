@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yu Zhu&#39;s Homepage on Yu Zhu&#39;s Homepage</title>
-    <link>https://yu_zhu.github.io/</link>
+    <link>https://arith2.github.io/</link>
     <description>Recent content in Yu Zhu&#39;s Homepage on Yu Zhu&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Animal Gait Generation</title>
-      <link>https://yu_zhu.github.io/project/animal-gait/</link>
+      <link>https://arith2.github.io/project/animal-gait/</link>
       <pubDate>Mon, 08 Oct 2018 19:10:00 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/animal-gait/</guid>
+      <guid>https://arith2.github.io/project/animal-gait/</guid>
       <description>&lt;p&gt;I did this research project at &lt;a href=&#34;http://www.cad.zju.edu.cn/english.html&#34; target=&#34;_blank&#34;&gt;State Key Lab of CAD/CG&lt;/a&gt;, &lt;a href=&#34;http://www.zju.edu.cn/english/&#34; target=&#34;_blank&#34;&gt;Zhejiang University&lt;/a&gt;, advised by &lt;a href=&#34;http://www.cad.zju.edu.cn/home/weiweixu/weiweixu_en.htm&#34; target=&#34;_blank&#34;&gt;Weiwei Xu&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I developed a system that could automatically generate gait and form given an animal skeleton. I referred the method proposed in &lt;a href=&#34;http://grail.cs.washington.edu/projects/animal-morphology/s2009/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Optimal Gait and Form for Animal Locomotion&lt;/em&gt;&lt;/a&gt;. Given the mass of different parts of the animal, I used a objective function as a inner loop and a sample based optimization method as a outer loop. The inner loop penalized joint torque, joint velocity and head motion. I used SQP optimization method to solve this constrained non-linear optimization problem. The outer loop optimized foot contact time. I used basin-CMA to solve this sample based optimization problem.&lt;/p&gt;
@@ -28,10 +28,10 @@
     
     <item>
       <title>Codimensional Fluid Simulation</title>
-      <link>https://yu_zhu.github.io/project/codim-fluid/</link>
+      <link>https://arith2.github.io/project/codim-fluid/</link>
       <pubDate>Mon, 08 Oct 2018 19:10:00 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/codim-fluid/</guid>
+      <guid>https://arith2.github.io/project/codim-fluid/</guid>
       <description>&lt;p&gt;I am currently working on this research project advised by &lt;a href=&#34;http://www.dartmouth.edu/~boolzhu/index.html&#34; target=&#34;_blank&#34;&gt;Bo Zhu&lt;/a&gt;. This project is towards SIGGRAPH 2019.&lt;/p&gt;
 
 &lt;p&gt;We use closest point method (CPM, i.e. extending points on the surface to 3D space) to solve partial differential equation (PDE, like Navier-Stokes equations) on surface. We compute level set function from surface, solve Poisson equation on 3D grid, interpolate pressure and velocity value from closest points on the grid to surface, and calculate advection using particles on the surface. We also adopt non-manifold grid to handle situations where two surfaces are close to each other.&lt;/p&gt;
@@ -44,26 +44,26 @@
     
     <item>
       <title>ToonNet: A cartoon image dataset and a DNN-based semantic classification system</title>
-      <link>https://yu_zhu.github.io/publication/toonnet/</link>
+      <link>https://arith2.github.io/publication/toonnet/</link>
       <pubDate>Thu, 09 Aug 2018 11:03:07 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/publication/toonnet/</guid>
+      <guid>https://arith2.github.io/publication/toonnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cartoon Image Modelling</title>
-      <link>https://yu_zhu.github.io/project/cartoon-image-modelling/</link>
+      <link>https://arith2.github.io/project/cartoon-image-modelling/</link>
       <pubDate>Wed, 18 Jul 2018 21:00:15 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/cartoon-image-modelling/</guid>
+      <guid>https://arith2.github.io/project/cartoon-image-modelling/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m doing this research project at &lt;a href=&#34;http://dalab.se.sjtu.edu.cn/www/home/&#34; target=&#34;_blank&#34;&gt;Digital ART Lab&lt;/a&gt;, advised by &lt;a href=&#34;http://dalab.se.sjtu.edu.cn/www/home/?page_id=17&#34; target=&#34;_blank&#34;&gt;Xubo Yang&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Cartoon image modelling is an interesting topic both in academia and industry. Once this technique becomes mature, children can easily model their hand-drawn cartoon character and see their character move and dance vividly via an AR application. However, current modelling method simply dilates the image to a 3D model and adds an NPR shader, which only works on limited cartoon images and requires manual configuration of joints of the character.&lt;/p&gt;
 
 &lt;p&gt;We decide to add semantic information to the modelling process. First, we do semantic classification and segmentation to the cartoon image, using a customized deep neural network trained on a dataset we built. Then, we model the image using classification and segmentation information, and generate skeleton (with limbs and joints) automatically. Finally, we attach pre-defined animation and sound to make the character move and dance.&lt;/p&gt;
 
-&lt;p&gt;This research project is still in progress. We have built a cartoon image dataset and a DNN-based semantic classification system. See &lt;a href=&#34;https://yu_zhu.github.io/publication/toonnet/&#34;&gt;&lt;em&gt;ToonNet: A cartoon image dataset and a DNN-based semantic classification system&lt;/em&gt;&lt;/a&gt; for detail. we are currently experimenting modelling the cartoon image interactively using classfication and segmentation information.&lt;/p&gt;
+&lt;p&gt;This research project is still in progress. We have built a cartoon image dataset and a DNN-based semantic classification system. See &lt;a href=&#34;https://arith2.github.io/publication/toonnet/&#34;&gt;&lt;em&gt;ToonNet: A cartoon image dataset and a DNN-based semantic classification system&lt;/em&gt;&lt;/a&gt; for detail. we are currently experimenting modelling the cartoon image interactively using classfication and segmentation information.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Skills involved: Python/Matlab/C#, Unity, Tensorflow&lt;/strong&gt;&lt;/p&gt;
 </description>
@@ -71,10 +71,10 @@
     
     <item>
       <title>Data Mining Research</title>
-      <link>https://yu_zhu.github.io/project/data-mining-research/</link>
+      <link>https://arith2.github.io/project/data-mining-research/</link>
       <pubDate>Wed, 18 Jul 2018 19:45:05 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/data-mining-research/</guid>
+      <guid>https://arith2.github.io/project/data-mining-research/</guid>
       <description>
 
 &lt;p&gt;I have several research experiences on data mining, which will be described below in detail.&lt;/p&gt;
@@ -103,10 +103,10 @@
     
     <item>
       <title>Human Shape and Pose Modelling</title>
-      <link>https://yu_zhu.github.io/project/human-shape-and-pose-modelling/</link>
+      <link>https://arith2.github.io/project/human-shape-and-pose-modelling/</link>
       <pubDate>Wed, 18 Jul 2018 19:43:12 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/human-shape-and-pose-modelling/</guid>
+      <guid>https://arith2.github.io/project/human-shape-and-pose-modelling/</guid>
       <description>&lt;p&gt;This research project is the PRP research project of &lt;a href=&#34;http://en.sjtu.edu.cn&#34; target=&#34;_blank&#34;&gt;Shanghai Jiao Tong University&lt;/a&gt;. I did this project at &lt;a href=&#34;http://www.visionlab.sjtu.edu.cn&#34; target=&#34;_blank&#34;&gt;VisionLab&lt;/a&gt;, advised by &lt;a href=&#34;http://www.automation.sjtu.edu.cn/en/ShowPeople.aspx?info_id=505&amp;amp;info_lb=326&amp;amp;flag=224&#34; target=&#34;_blank&#34;&gt;Xu Zhao&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We developed a system that automatically generate a 3D human model with pose and shape from a single RGB image. We then used this technique to develop an application: automatically measure the BWH of a person from a photo. Detailed procedure is:&lt;/p&gt;
@@ -126,10 +126,10 @@
     
     <item>
       <title>Lumir</title>
-      <link>https://yu_zhu.github.io/project/lumir/</link>
+      <link>https://arith2.github.io/project/lumir/</link>
       <pubDate>Wed, 18 Jul 2018 19:40:33 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/lumir/</guid>
+      <guid>https://arith2.github.io/project/lumir/</guid>
       <description>&lt;p&gt;Lumir is the course project of &lt;em&gt;SE342-Computer Vision&lt;/em&gt;. It is written in C++, using Qt framework.&lt;/p&gt;
 
 &lt;p&gt;Lumir provides various image processing algorithms. &lt;strong&gt;All of the algorithms are written by myself&lt;/strong&gt;, without using libraries like OpenCV. Supported algorithms are listed below:&lt;/p&gt;
@@ -153,7 +153,7 @@
 &lt;li&gt;Watershed algorithm&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/yu_zhu/SE342-Computer-Vision&#34; target=&#34;_blank&#34;&gt;Github link&lt;/a&gt; for source code.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/arith2/SE342-Computer-Vision&#34; target=&#34;_blank&#34;&gt;Github link&lt;/a&gt; for source code.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Skills involved: C++, Qt, OpenCV(no algorithms used)&lt;/strong&gt;&lt;/p&gt;
 </description>
@@ -161,10 +161,10 @@
     
     <item>
       <title>Neuron Simulation Engine</title>
-      <link>https://yu_zhu.github.io/project/neuron-simulation-engine/</link>
+      <link>https://arith2.github.io/project/neuron-simulation-engine/</link>
       <pubDate>Wed, 18 Jul 2018 19:20:06 +0800</pubDate>
       
-      <guid>https://yu_zhu.github.io/project/neuron-simulation-engine/</guid>
+      <guid>https://arith2.github.io/project/neuron-simulation-engine/</guid>
       <description>&lt;p&gt;Neuron simulation engine is the course project of &lt;em&gt;SE341-Game Designing and Programming&lt;/em&gt;. We developed this engine using Unity and C# language.&lt;/p&gt;
 
 &lt;p&gt;This simulation engine allows user to create and delete neurons and build a neural network via HTC Vive headset. It can also simulate the process of nerve impulse and inhibition. Detailed features are listed below:&lt;/p&gt;
