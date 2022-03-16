@@ -191,7 +191,7 @@
 
       <h3>1. Targets</h3>
 
-      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I store the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help hide the long memory latency.</p>
+      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I put the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help hide the long memory latency.</p>
 
       <h3>2. Contributions</h3>
 
