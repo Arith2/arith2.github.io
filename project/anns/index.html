@@ -240,7 +240,7 @@ I developed a system that could automatically generate gait and form given an an
       <p>I did this research project at <a href="https://systems.ethz.ch/" target="_blank">Systems Group</a>, <a href="https://ethz.ch/en.html" target="_blank">ETH</a>, advised by <a href="https://people.inf.ethz.ch/alonso/" target="_blank">Prof. Dr. Gustavo Alonso</a>.</p>
 
       <h3>1. Highlights: efficient priority queue.</h3>
-      <p>In this project, the most important thing is to realize a priority queue with size 128. The target is to ensure that the interval of inserting into this queue matches the speed of random memory access (4~5 cycles). </p>
+      <p>In this project, the most important thing is to realize a priority queue with size 128. The target is to ensure that the interval of inserting into this queue matches the speed of random memory access (4~5 cycles). Besides, the latency of single insertion should be as small as possible. Traditionally, we can build priority queue with tree structure. So we need to compare log(128)=7 times and then move elements. Operations can be pipelined but the latency of moving elements is too high. To solve this problem, I build a priority queue with out-of-order storage. Each element has two registers, one for data, the other for index (representing the order). Each element is independent of each other. </p>
 
       <h3>2. Introduction:</h3>
 
