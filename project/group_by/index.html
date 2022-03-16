@@ -191,7 +191,7 @@
 
       <h3>1. Targets</h3>
 
-      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I store the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help hide memory latency.</p>
+      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I store the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help hide the long memory latency.</p>
 
       <h3>2. Contributions</h3>
 
@@ -206,6 +206,8 @@
 
       <img src="/img/groub_by.PNG"
            alt="">
+
+      <p>For single-thread operation, the common procedure is reading key-value pairs, calculating the corresponding hash values, read aggregation values from hash table, update and write into the hash table. For multi-thread operations, if I insist the same procedure, different PEs may access the same HBM bank and there would be the problem of concurrency due to read-after-write hazard. </p>
 
       <h3>4. Analysis:</h3>
 
