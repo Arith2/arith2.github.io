@@ -191,7 +191,7 @@
 
       <h3>1. Targets</h3>
 
-      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I store the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help accelerate.</p>
+      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I store the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help hide memory latency.</p>
 
       <h3>2. Contributions</h3>
 
@@ -200,7 +200,14 @@
           <li>Split the whole hash tables into several spans and store them in different HBM banks. Calculate hash values of input keys and distribute them to different processing engines (PE). So that I only need to concatenate these local hash tables in the final stage and there is no need to shuffle and merge.</li>
       </ul>        
 
-      <h3>3. Analysis:</h3>
+      <h3>3. Introduction</h3>
+
+      <p>Group-by aggregation is a combination of GROUP BY clause and AGGREGATE functions, which is used to obtain summary information from groups of rows in a table. The number of unique keys is called CARDINALITY. A concrete example is shown as below: </p>
+
+      <img src="/img/groub_by.PNG"
+           alt="">
+
+      <h3>4. Analysis:</h3>
 
       <p>All the codes are written in HLS. For more details, please contact me.</p>
 
