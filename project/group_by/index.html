@@ -211,7 +211,7 @@
 
       <p>For on-chip cahce, I use CAM to do pre-aggregation to hide the latency of off-chip memory access and avoid RAW hazard. </p>
 
-      <h3>4. Analysis:</h3>
+      <h3>4. Evaluation:</h3>
 
       <p>The design is evaluated in three datasets: <strong>uniform, hot-key, zipf</strong>. When the number of input key-value tuples is 64M, the throughput and CAM hit rate are shown as below: </p>
 
@@ -221,7 +221,7 @@
       <img src="/img/cam_group_by.PNG"
            alt="">
 
-      Distributing key-value pairs to different AEs according to their hash values may be unbalanced determined by the original key distribution. Zipf dataset is the most representative.  
+      Distributing key-value pairs to different AEs according to their hash values may be unbalanced determined by the original key distribution. The AE which receives the most input tuples determine the final execution time. Zipf dataset is the most representative.  
 
       <img src="/img/ae_group_by.PNG"
            alt="">
