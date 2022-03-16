@@ -196,9 +196,8 @@
       <h3>2. Contributions</h3>
 
       <ul>
-          <li>Optimize the procedure to use Content-Addressable-Memory (CAM) as cache to support high-cardinality keys and handle skewed data well.</li>
-          <li>Pre-distribute hash values to different aggregation engines at the very beginning and build hash tables in corresponding memory banks so that each local hash table is totally independent. This method is easy to scale to more engines and there is no need to shuffle.</li>
-          <li>Ne need to lock the memory and update the hash bucket with 4 slots at the same time to boost performance.</li>
+          <li>Optimize the procedure to use Content-Addressable-Memory (CAM) as cache to reduce the request of off-chip memory.</li>
+          <li>Split the whole hash tables into several spans and store them in different HBM banks. Calculate hash values of input keys and distribute them to different processing engines (PE). So that I only need to concatenate these local hash tables in the final stage and there is no need to shuffle and merge.</li>
       </ul>        
 
       <h3>3. Analysis:</h3>
