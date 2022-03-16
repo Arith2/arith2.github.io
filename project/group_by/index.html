@@ -197,7 +197,7 @@
 
       <ul>
           <li>Optimize the procedure to use Content-Addressable-Memory (CAM) as cache to reduce the number of requests of off-chip memory.</li>
-          <li>Split the whole hash tables into several spans and store them in different HBM banks. Calculate hash values of input keys and distribute them to different processing engines (PE). So that I only need to concatenate these local hash tables in the final stage and there is no need to shuffle and merge.</li>
+          <li>Split the whole hash tables into several spans and store them in different HBM banks. Calculate hash values of input keys and distribute them to different aggregation engines (AE). So that I only need to concatenate these local hash tables in the final stage and there is no need to shuffle and merge.</li>
       </ul>        
 
       <h3>3. Introduction</h3>
@@ -207,11 +207,24 @@
       <img src="/img/groub_by.PNG"
            alt="">
 
-      <p>For single-thread operation, the common procedure is reading key-value pairs, calculating the corresponding hash values, read aggregation values from hash table, update and write into the hash table. For multi-thread operations, if I insist the same procedure, different PEs may access the same HBM bank and there would be the problem of concurrency due to read-after-write <strong>(RAW)</strong> hazard. So I build local hash table for each PE and distribute key-value pairs to different PEs according to their corresponding hash values. The possible problem is the unbalanced hash distribution due to skewed data.</p>
+      <p>For single-thread operation, the common procedure is reading key-value pairs, calculating the corresponding hash values, read aggregation values from hash table, update and write into the hash table. For multi-thread operations, if I insist the same procedure, different PEs may access the same HBM bank and there would be the problem of concurrency due to read-after-write <strong>(RAW)</strong> hazard. So I build local hash table for each AE and distribute key-value pairs to different PEs according to their corresponding hash values. The possible problem is the unbalanced hash distribution due to skewed data.</p>
 
       <p>For on-chip cahce, I use CAM to do pre-aggregation to hide the latency of off-chip memory access and avoid RAW hazard. </p>
 
       <h3>4. Analysis:</h3>
+
+      <p>The design is evaluated in three datasets: <strong>uniform, hot-key, zipf</strong>. When the number of input key-value tuples is 64M, the throughput and CAM hit rate are shown as below: </p>
+
+      <img src="/img/throughput_group_by.PNG"
+           alt="">
+
+      <img src="/img/cam_groub_by.PNG"
+           alt="">
+
+      Distributing key-value pairs to different AEs according to their hash values may be unbalanced determined by the original key distribution. Zipf dataset is the most representative.  
+
+      <img src="/img/ae_groub_by.PNG"
+           alt="">
 
       <p>All the codes are written in HLS. For more details, please contact me.</p>
 
