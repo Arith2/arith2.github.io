@@ -207,9 +207,9 @@
       <img src="/img/groub_by.PNG"
            alt="">
 
-      <p>For single-thread operation, the common procedure is reading key-value pairs, calculating the corresponding hash values, read aggregation values from hash table, update and write into the hash table. For multi-thread operations, if I insist the same procedure, different PEs may access the same HBM bank and there would be the problem of concurrency due to read-after-write hazard. So I build local hash table for each PE and distribute key-value pairs to different PEs according to their corresponding hash values. The possible problem is the unbalanced hash distribution due to skewed data.</p>
+      <p>For single-thread operation, the common procedure is reading key-value pairs, calculating the corresponding hash values, read aggregation values from hash table, update and write into the hash table. For multi-thread operations, if I insist the same procedure, different PEs may access the same HBM bank and there would be the problem of concurrency due to read-after-write <strong>(RAW)</strong> hazard. So I build local hash table for each PE and distribute key-value pairs to different PEs according to their corresponding hash values. The possible problem is the unbalanced hash distribution due to skewed data.</p>
 
-      <p>For on-chip cahce, I use CAM to do pre-aggregation to hide the latency of off-chip memory access and avoid read-after-write hazard. </p>
+      <p>For on-chip cahce, I use CAM to do pre-aggregation to hide the latency of off-chip memory access and avoid RAW hazard. </p>
 
       <h3>4. Analysis:</h3>
 
