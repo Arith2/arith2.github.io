@@ -69,7 +69,7 @@
   
   <meta property="og:site_name" content="Yu Zhu&#39;s Homepage">
   <meta property="og:url" content="https://arith2.github.io/project/anns/">
-  <meta property="og:title" content="Approximate Nearest Neighbor Search on FPGA | Yu Zhu&#39;s Homepage">
+  <meta property="og:title" content="Aggregation Group-by on FPGA | Yu Zhu&#39;s Homepage">
   <meta property="og:description" content="I did this research project at Systems Group, ETH, advised by Prof. Dr. Gustavo Alonso.">
   <meta property="og:locale" content="en-us">
   
@@ -82,7 +82,7 @@
 
   
 
-  <title>Approximate Nearest Neighbor Search on FPGA | Yu Zhu&#39;s Homepage</title>
+  <title>Aggregation Group-by on FPGA | Yu Zhu&#39;s Homepage</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -177,7 +177,7 @@
   <div class="article-container">
 
     <div class="pub-title">
-      <h1 itemprop="name">Approximate Nearest Neighbor Search on FPGA</h1>
+      <h1 itemprop="name">Aggregation Group-by on FPGA</h1>
       <span class="pub-authors" itemprop="author">&nbsp;</span>
       <span class="pull-right">
         
@@ -189,49 +189,19 @@
     <div class="article-style" itemprop="articleBody">
       <p>I did this research project at <a href="https://systems.ethz.ch/" target="_blank">Systems Group</a>, <a href="https://ethz.ch/en.html" target="_blank">ETH</a>, advised by <a href="https://people.inf.ethz.ch/alonso/" target="_blank">Prof. Dr. Gustavo Alonso</a>.</p>
 
-      <h3>1. Highlights: efficient priority queue</h3>
+      <h3>1. Targets</h3>
 
-      <p>In this project, the most important thing is to realize a priority queue with size 128. The target is to ensure that the interval of inserting into this queue matches the speed of random memory access (4~5 cycles). Besides, the latency of single insertion should be as small as possible. Traditionally, we can build priority queue with tree structure. So we need to compare log(128)=7 times and then move elements. Operations can be pipelined but the latency of moving elements is too high. To solve this problem, I build a priority queue with out-of-order storage. Each element has two registers, one for data, the other for index (representing the order). The operation of each element is independent of each other. The input would compare with the data of all elements simultaneously. Then according to the result of comparison, the index of each element would increase or keep the same. Next, I would construct a bitmap according to these indexes. The original index of all elements ranges from 0~127. When a new element is inserted into the queue, some indexes keep the same while the other indexes are incremented by 1. This means for the range of 0~127 (the element with index 128 is discarded), there would be one vacant position and it is used to be the index of the new element. The dataflow is shown as below:</p>
-          
-      <img src="/img/pq_dataflow.PNG"
-        alt="">
-        
-      <p>Assuming the queue size is 4 and the new input is 18, operations per cycle are shown as below: </p>
+      <p>The goal of this project is to implement multi-threaded in-memory hash-based group-by aggregation on FPGA. When the cardinality of keys is low, like 2<sup>10</sup>, we can build a hash table via on-chip memory (BRAM/URAM). But when the cardinality is high, like 2<sup>20</sup>, on-chip memory is not big enough to store the whole hash table. In this project, I store the whole hash table in off-chip memory (HBM), which has a high read/write latency, and build a cache via on-chip memory (BRAM) to help accelerate.</p>
 
-      <img src="/img/priority_queue.PNG"
-           alt="">
+      <h3>2. Contributions</h3>
 
-      <p>However, the interval of such design is a bit high due to the "selection" operation. To help reduce the interval, I manage to split the whole process into two independent stages. As a result, the throughput of consecutive insertion is maximized by pipelining bitmap construction and queue update. The dataflow is shown as below: </p>
-
-      <img src="/img/pq_dataflow_new.PNG"
-        alt="">
-
-      <p>Still assuming the queue size is 4 and the new input is 18, operations per cycle are shown as below: </p>
-
-      <img src="/img/priority_queue_new.PNG"
-           alt="">
-
-      <p>Finally, the initiation interval of inserting into priority queue matches the speed of random memory access. And the latency of single insertion is ignorable.</p>
-
-      <h3>2. Introduction:</h3>
-
-      <p>Nearest-Neighbor-Search (NNS) problem means given a query vector and a defined distance function, it requires to return the node among the whole dataset which has the nearest distance with the query vector. Such exact solution is time-consuming. So that Approximate-Nearest-Neighbor-Search (ANNS) relaxes the condition of exact search and allows a small number of errors. Researchers use "recall" to measure the quality of inexact search. The common definition of "recall" is the ratio for all query vectors whether the true nearest neighbor is found in the returned K nodes.</p>
-
-      <p>To help accelerate ANNS in large dataset, <a href="https://ieeexplore.ieee.org/abstract/document/8594636/?casa_token=eZ0Q0704kZUAAAAA:T4BhixYND8gEx-0IbLIwKnAvTpMNIyAW3Q2GwMaU9ZEbooTzCCjLRO02y_fBeey6UKhjZ6llpe0" target="_blank">Malkov</a> proposed Hierarchical-Navigable-Small-World model (HNSW) based on proximity graph algorithm. In this model, it has several layers and each node is assigned a different maximum layer according to exponential distribution. The search always starts from the top layer with a random enter node. It would go to the next layer when it reaches the node with minimum distance with the query vector. The basic structure of HNSW is shown as below: </p>
-
-      <img src="/img/hnsw.png"
-           alt=""
-           title="Basic structure of HNSW">
+      <ul>
+          <li>Optimize the procedure to use Content-Addressable-Memory (CAM) as cache to support high-cardinality keys and handle skewed data well.</li>
+          <li>Pre-distribute hash values to different aggregation engines at the very beginning and build hash tables in corresponding memory banks so that each local hash table is totally independent. This method is easy to scale to more engines and there is no need to shuffle.</li>
+          <li>Ne need to lock the memory and update the hash bucket with 4 slots at the same time to boost performance.</li>
+      </ul>        
 
       <h3>3. Analysis:</h3>
-
-      <p>FPGA has good performance when operations can be fully pipelined and parallelized. But for graph algorithm such as HNSW, new search depends on the output of the last search so that I cannot fully pipeline these operations. Random memory access is another bottleneck. The comparison of throughput (query per second) between FPGA and CPU is shonw as below: </p>
-
-      <img src="/img/throughput_hnsw.PNG"
-           alt=""
-           >
-
-      <p>The FPGA in use is Alveo U280 (32 HBM channels, running frequency 130MHz). CPUs for comparison are R630 (32 cores) and Alveo0 (80 cores). </p>
 
       <p>All the codes are written in HLS. For more details, please contact me.</p>
 
