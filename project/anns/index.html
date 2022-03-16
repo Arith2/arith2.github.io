@@ -276,6 +276,7 @@
            title="Basic structure of HNSW">
 
       <h3>3. Analysis:</h3>
+      <p>FPGA has good performance when operations can be fully pipelined and parallelized. But for graph algorithm such as HNSW, new search depends on the output of the last search so that I cannot fully pipeline these operations. Besides, random memory access is also the bottleneck. The comparison of throughput (query per second) between FPGA and CPU is shonw as below: </p>
 
 
       <p>All the codes are written in HLS.</p>
