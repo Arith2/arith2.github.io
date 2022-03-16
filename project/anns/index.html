@@ -8,19 +8,11 @@
   <meta name="theme" content="hugo-academic">
   <meta name="generator" content="Hugo 0.44" />
   <meta name="author" content="Yu Zhu">
-
-  
-  
-  
-  
-    
-      
-    
   
   <meta name="description" content="I did this research project at Systems Group, ETH, advised by Prof. Dr. Gustavo Alonso.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://arith2.github.io/project/animal-gait/">
+  <link rel="alternate" hreflang="en-us" href="https://arith2.github.io/project/anns/">
 
   
 
@@ -71,12 +63,12 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://arith2.github.io/project/animal-gait/">
+  <link rel="canonical" href="https://arith2.github.io/project/anns/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Yu Zhu&#39;s Homepage">
-  <meta property="og:url" content="https://arith2.github.io/project/animal-gait/">
+  <meta property="og:url" content="https://arith2.github.io/project/anns/">
   <meta property="og:title" content="Approximate Nearest Neighbor Search on FPGA | Yu Zhu&#39;s Homepage">
   <meta property="og:description" content="I did this research project at Systems Group, ETH, advised by Prof. Dr. Gustavo Alonso.">
   <meta property="og:locale" content="en-us">
@@ -189,46 +181,6 @@
       <span class="pub-authors" itemprop="author">&nbsp;</span>
       <span class="pull-right">
         
-<!-- <div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Animal%20Gait%20Generation&amp;url=https%3a%2f%2fjinyx728.github.io%2fproject%2fanimal-gait%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fjinyx728.github.io%2fproject%2fanimal-gait%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjinyx728.github.io%2fproject%2fanimal-gait%2f&amp;title=Animal%20Gait%20Generation"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fjinyx728.github.io%2fproject%2fanimal-gait%2f&amp;title=Animal%20Gait%20Generation"
-         target="_blank" rel="noopener">
-        <i class="fa fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Animal%20Gait%20Generation&amp;body=https%3a%2f%2fjinyx728.github.io%2fproject%2fanimal-gait%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div> -->
-
-
       </span>
     </div>
 
@@ -267,10 +219,6 @@
 
       <p>To help accelerate ANNS in large dataset, <a href="https://ieeexplore.ieee.org/abstract/document/8594636/?casa_token=eZ0Q0704kZUAAAAA:T4BhixYND8gEx-0IbLIwKnAvTpMNIyAW3Q2GwMaU9ZEbooTzCCjLRO02y_fBeey6UKhjZ6llpe0" target="_blank">Malkov</a> proposed Hierarchical-Navigable-Small-World model (HNSW) based on proximity graph algorithm. In this model, it has several layers and each node is assigned a different maximum layer according to exponential distribution. The search always starts from the top layer with a random enter node. It would go to the next layer when it reaches the node with minimum distance with the query vector. The basic structure of HNSW is shown as below: </p>
 
-      <!-- <img src="/img/graph_search.PNG"
-           alt=""
-           width="400"
-           height="341"> -->
       <img src="/img/hnsw.png"
            alt=""
            title="Basic structure of HNSW">
